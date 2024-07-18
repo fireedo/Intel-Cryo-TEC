@@ -1,0 +1,14 @@
+[Unit]
+Description=Intel Cryo TEC
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/intel_cryo_tec
+Restart=always
+RestartSec=1
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
